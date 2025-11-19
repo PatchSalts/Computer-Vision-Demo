@@ -16,7 +16,7 @@ def analyzedice(imgfname):
 if __name__ == "__main__":
     imgfpaths = [ \
         "images/dice/roll1.jpg", \
-        # "images/dice/roll2.jpg", \
+        "images/dice/roll2.jpg", \
         # "images/dice/roll3.jpg", \
         # "images/dice/roll4.jpg", \
         # "images/dice/roll5.jpg", \
