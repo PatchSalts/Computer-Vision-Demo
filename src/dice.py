@@ -1,7 +1,7 @@
 import cv2 as cv
 from matplotlib import pyplot as plt
 
-def processdice(imgfname):
+def analyzedice(imgfname):
     img = cv.imread(imgfname, cv.IMREAD_GRAYSCALE)
     hst = cv.calcHist([img], [0], None, [256], [0, 255])
     plt.xkcd()
@@ -14,7 +14,7 @@ def processdice(imgfname):
     plt.show()
 
 if __name__ == "__main__":
-    imgfnames = [ \
+    imgfpaths = [ \
         "images/dice/roll1.jpg", \
         # "images/dice/roll2.jpg", \
         # "images/dice/roll3.jpg", \
@@ -25,5 +25,5 @@ if __name__ == "__main__":
         # "images/dice/roll8.jpg", \
     ]
 
-    for imgfname in imgfnames:
-        processdice(imgfname)
+    for imgfpath in imgfpaths:
+        analyzedice(imgfpath)
