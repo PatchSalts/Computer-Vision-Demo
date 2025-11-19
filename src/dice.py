@@ -2,8 +2,9 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 
 def analyzedice(imgfname):
-    img = cv.imread(imgfname, cv.IMREAD_GRAYSCALE)
-    hst = cv.calcHist([img], [0], None, [256], [0, 255])
+    img = cv.imread(imgfname)
+    gry = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+    hst = cv.calcHist([gry], [0], None, [256], [0, 255])
     plt.xkcd()
     plt.subplot(1, 2, 1)
     plt.title("Image")
